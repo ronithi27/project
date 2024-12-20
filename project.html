@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZENFOLIO</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: "Bebas Neue", sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+        }
+
+        header {
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 32px;
+            font-weight: bold;
+            font-family: "Bebas Neue", sans-serif;
+            transition: 0.2s ease-in-out;
+        }
+
+        .logo:hover{
+            font-family: "Bebas Neue", sans-serif;
+            font-size: 38px;
+            font-style: italic;
+            font-weight:600;
+        }
+
+        nav a {
+            margin-left: 30px;
+            text-decoration: none;
+            color: black;
+            text-transform: uppercase;
+            font-size: 20px;
+            line-height: 32px;
+            font-family: "Bebas Neue", sans-serif;
+            font-weight: 400;
+            transition: 0.2s ease-in-out;
+
+        }
+
+        nav a:hover{
+            font-family:'Courier New', Courier, monospace;
+            font-size: 30px;
+            font-style: italic;
+            font-weight:600;
+        }
+
+        .one-sided-border {
+            border-bottom: 2px solid black;
+        }
+    
+
+        .top {
+            padding: 40px;
+            text-align: center;
+        }
+
+        .top:hover{
+            font-size: 2rem;
+            color: #7c7b7b;
+            background-color: #faf8f7;
+            border-radius: 70%;
+            box-shadow: 0 8px 15px rgba(171, 166, 166, 0.2);
+            transform: rotate(2deg);
+            background-position: right;
+            transform: translateY(-5px);
+            border: 0 ;
+        }
+
+        .top h1 {
+            font-size: 48px;
+            margin-bottom: 40px;
+            text-transform: uppercase;
+            color: #7c7b7b;
+        }
+
+        .top-image {
+            width: 100%;
+            height: auto;
+            max-height: 600px;
+            object-fit: cover;
+        }
+
+        .top-image:hover{
+            width: 101%;
+            height: 101%;
+            border-radius: 25px;
+            
+            box-shadow: 5px 5px 70px 2px ;
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 40px;
+        }
+
+        .portfolio-item {
+            position: relative;
+        }
+
+        .portfolio-item img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            transition:0.3s ease-in ;
+        }
+        .portfolio-item img:hover{
+            width: 101%;
+            height: 101%;
+            border-radius: 25px;
+            
+            box-shadow: 5px 5px 70px 2px ;
+        }
+
+        .portfolio-item-info {
+            bottom: 0;
+            left: 0;
+            padding: 10px;
+            background: white;
+        }
+
+        .portfolio-item-info h3 {
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+
+        .portfolio-item-info p {
+            font-size: 12px;
+            color: #666;
+        }
+
+        .about {
+            text-align: center;
+            padding: 80px 40px;
+            max-width: 800px;
+            margin: 0 auto;
+            font-family: "Roboto Mono", monospace;
+            font-weight: bold;
+            transition: 0.8s ease-in-out;
+        }
+
+        .about:hover{
+            font-size: 2rem;
+            color: #7c7b7b;
+            background-color: #faf8f7;
+            border-radius: 70%;
+            box-shadow: 0 8px 15px rgba(171, 166, 166, 0.2);
+            transform: rotate(2deg);
+            background-position: right;
+            transform: translateY(-5px);
+            border: 0 ;
+
+        }
+
+        .contact {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 40px;
+            margin-top: 40px;
+            
+        }
+
+        .contact h2 {
+            font-size: 24px;
+            text-transform: uppercase;
+        }
+
+        .contact p {
+            max-width: 400px;
+            font-family: "Roboto Mono", monospace;
+        }
+
+        footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 40px;
+            margin-top: 40px;
+            font-family: "Bebas Neue", sans-serif;
+        }
+        footer p{
+            font-weight: 400;
+            font-size: 28px;
+            line-height: 28px;
+        }
+        .contact :hover{
+        transform: translateY(-5px) rotate(3deg); 
+        box-shadow: 0 8px 15px rgba(192, 183, 183, 0.2); 
+        color: #ebac99;
+        border-color: #ffab91;
+        transition: 0.2s ease-in-out; 
+        }
+
+
+        .follow-btn {
+            padding: 10px 20px;
+            border: 1px solid black;
+            text-decoration: none;
+            color: black;
+            border-radius: 8px;
+            font-family: "Roboto Mono", monospace;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 24px;
+            transition: 0.2s ease-in-out;
+        }
+
+        .follow-btn:hover {
+        transform: translateY(-5px) rotate(-3deg); 
+        box-shadow: 0 8px 10px rgba(80, 80, 80, 0.2); 
+        color: #ffab91;
+        border-color: #ffab91; 
+        }
+
+
+        @media (max-width: 768px) {
+            .portfolio-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .top h1 {
+                font-size: 32px;
+            }
+
+            .about p {
+                font-size: 20px;
+            }
+
+            nav {
+                display: none;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .portfolio-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact {
+                flex-direction: column;
+                text-align: center;
+                gap: 20px;
+            }
+
+            header {
+                padding: 20px;
+            }
+
+            .top {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">ZENFOLIO</div>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <div class="one-sided-border"></div>
+
+    <section class="top">
+        <h1>Welcome to my tranquil space</h1>
+        <img src="https://s3-alpha-sig.figma.com/img/65fe/cb09/0107ca52e4197a1ed3df19be67024bb5?Expires=1734912000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=BsrZ5wbeBWMqFb3Q208ZjdF-BApxlGqh9FhzHQCfBEpJ08jhlv63L4gZeFMDn8Qa40p6k7C7quYM~ibimlCOqVoBXfZO7lpjruGuXriOPE1AhqxnVxG5ypBH3y99yDFs83qAlC2sPlG0JhTSECWjIluaiK-oWQXu0vG9cAohn3~eCi1PtcetnQDqxDmbXfxrPESF2uBcyGmRpIxTaGHGuFzOpiCV5xSTjIGcsI3gxwsQeKGMkTo8RGNeON0hqZTWsbodeWjILLaBlsJVEmFpTVuwXfun7b2Yegxh7rI7ljU0SfjhJxJandH8b0pBqKoOKmJOSK~XVZ0V7LqR94STNw__" class="top-image">
+    </section>
+
+   
+
+    <section class="portfolio-grid">
+        <div class="portfolio-item">
+            <img src="https://s3-alpha-sig.figma.com/img/e72a/30db/677899d081ed6a1372feb264383b7210?Expires=1734912000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=TVihekG6i0KPu7WhlELtTAz0SS1JoTr1LLma0p1-R~VX4PgcUSuBNQ-H~sRpXslvT0p7Z3MxT0mzxYSGYNMjM8IXq5kbsYu8yDwsZXFGk5Vj-MlPy-cMHFtKZB8VrR6KT621yobYEr98rCGIOgirDd5vTTartPEy3clc92ELCU5gS1ejjgvMyRELK80eiUmU8qhbpUTZ17vOvwMi9XhXdQPBQiMXlhMsRC-kzFeO9HC72iaArDkFIDwTnR9KbdGMOPgNaN7wXbLYpDUz56ZjJWSjUSk6IPtul-q3tT8qk8j6Co5OD29VkGDYnyOcQoZvkSYpIoc7v2eQBO94-fc-sQ__" alt="Serene Landscape">
+            <div class="portfolio-item-info">
+                <h3>Serene Landscape</h3>
+                <p>Photography</p>
+            </div>
+        </div>
+        <div class="portfolio-item">
+            <img src="https://s3-alpha-sig.figma.com/img/615f/483f/94006fe079fe2ca817ca60635d12b30e?Expires=1734912000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=WbJPwjjjGhdbprlNRzZllc0fkEYWmj-TIDAezFYfB9hTWaildPABfaVyD2xbP3tx~mJnJ-B1-qQynoy9WEknPLAvZ7koZr621fnDlxT3ITb4aidmo7DaiXUK4srG26q9ku1ls4skzEruAG8fj0YjF74Em0wHjCY2Xhtu-K0DSfJW043HDjFrzQJ9YeHbSCQ7lmQvZM~XlMjRD7sF~CF6Xh5-fw3lfQR171GPtngfmDjmXadL2TaCGQjZ0utAijgw-pM1DyRMKDwbYsxh6q7orxQzyxRx1ThezrRiPfdWX11aUdWZ-TmW3yrUJ3WAqM9wJqufoddOyQXg16Ygb1nyvw__" alt="Minimalist Design">
+            <div class="portfolio-item-info">
+                <h3>Minimalist Design</h3>
+                <p>Graphic Design</p>
+            </div>
+        </div>
+        <div class="portfolio-item">
+            <img src="https://s3-alpha-sig.figma.com/img/97bf/bc87/601f664838a529642b5733b3d1839a89?Expires=1734912000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=PmS9Kier4xAJklytQnox-xGxLeATZmkpSl8rEDdYYp77FBbhHDxyAM6G4i8PdhUblj7u~qsBY5ocqf~QBzuNJ-0iDDoQpWv2NfyjiOjZTMrjADDEaTeg7QhRGCls19EesdK4LXmCka70OXHjN5-Nx8kiZojUhY2E~4bbY4A9mrT8QNnjABphu1kLTZfbCe2aDCtG7PxlBht~Zbt9jonYsouNHh7AOwJdu88jdGJ5KaJ4w54xFoGzoOC5-uU2OxVGZdm-Rm4kSsLvj-tf-VRAB5x7BL73ZwSvSGEZ2sOlD7HGEEmlAdYEZb0CwFvczOT8f2HF6YD3iBd3rVKSF3Ux8g__" alt="Calm Interiors">
+            <div class="portfolio-item-info">
+                <h3>Calm Interiors</h3>
+                <p>Interior Design</p>
+            </div>
+        </div>
+        <div class="portfolio-item">
+            <img src="https://s3-alpha-sig.figma.com/img/9331/e730/5fa83920758516e7029e11c593a0ee91?Expires=1734912000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=ZuhQQ5eozPX9NUYJEuF9-lggV0Aj3iZLoaxToMbmx2bGKtlKslbXPxAHs0v~9wMocoRbnZIgkRDHyUXsps5a7TTNw4wcA983gRSynif1NYXWfJ7m~SvURz~aezyYX1g-x5f~J-1MyOGSHXs45rQLLMizzVggusNWOx6jiP7QBanAFmqY7hqTqUTxth4m-MHu-RhUKpeSuhU95HlpSrQEbwEJue4AlKJgUvNYveFw6RmGSDCcuLEuyScRK-MqqakrDuQSYx600QJZHv0Mev-0jIGq1N1eeWnvYek2Rr3nh~9vfjZHi~cwh74z0OLLcYtVdItFDvUMq8pKSjX8f4qpOg__" alt="Natural Elements">
+            <div class="portfolio-item-info">
+                <h3>Natural Elements</h3>
+                <p>Photography</p>
+            </div>
+        </div>
+        <div class="portfolio-item">
+            <img src="https://s3-alpha-sig.figma.com/img/fbe2/7979/9091a60254aba12351081afecb768afb?Expires=1734912000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Fur4Ttoh3FoVB9jIa~JODXSctf4V76gvdqLaRF7OU~pcs7g8gNhhzBqucJFx6~w0q92ckiaFd6yItKdbpHt33q~ZDNaeKSXmN6pUKmbvX6uhpnV5hQRmnv7dJAFnJyrJ~TWEUSorNqTzOP-sS19lXfWqQ5pRLOuwYMEmT8hcKz~Gv08w96xBbwDMP8aATWvPINy974Ytu3Oq45q~hVZLJkw~7anNPcHqHKKBlXf09yzI4hU6hSewixO4MCEtM0WXvYP~L-n0QcW~mFzGVVZszlC1Ei2VyDLX-5yhtJ6SzcgCHjZO8kKCxACjdRr2vDzBUh8W8JLlbRkgH-zfZlPmWA__" alt="Peaceful Art">
+            <div class="portfolio-item-info">
+                <h3>Peaceful Art</h3>
+                <p>Painting</p>
+            </div>
+        </div>
+        <div class="portfolio-item">
+            <img src="https://s3-alpha-sig.figma.com/img/9384/b5d7/b70e54e9caf514748e4a6bb63aa7c05d?Expires=1734912000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=gpKYC45KwD1bNz~hPKU5FDOOAjW6GM2vFw9SfhPIo3AwgVP6SZ3xATJNzAhWwvQrQfkBLQZ76qsmMgEEfLX68IG7oUKYfb~7AgCgoMLX6zioU5wqOMzsALem7IogWLF8aK70MTT6Ad0ZATFZDzRoSItxFxjopNNs1K~fFs7RBdszpKcV7M~izao9~CHIJoS5HBZfM6my6GN7KCzVwvua9VwBPDBqZ-JnRbKEknxcr6Tjyup4sK~JIU~w0O8q9rjJnLcbz6fYNWjwX-T3rAqrcuu-CgcH36GCZ9p7B-9kHSLtlA0LJJFf-awExSRrNprnK1H4a4YrhNNdlR30seQ72w__" alt="Zen Spaces">
+            <div class="portfolio-item-info">
+                <h3>Zen Spaces</h3>
+                <p>Architecture</p>
+            </div>
+        </div>
+        <div class="portfolio-item">
+            <img src="https://s3-alpha-sig.figma.com/img/c5d4/8a7a/8d107a134531995f8fc39c4b1e2401fc?Expires=1734912000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=KcvBjH6m1Vo19KxpHWPsZH~UhTxPGKB8~Q0WMKqW3agsCA33b2hb5kDmlS-P7SHHaPEE4ATEdvlUnGj1KzZvS9~-JCiHuFRPlZrd9bGRHtJda4b8sxDpCXHVFllNLWkhQhoWbgjy8igH1rcgB3c602suO4wdrZRRIAX6dZLUiKsUtczflGzmppTr2VoxWBMAMi5sxleixdazIEJfQFR2bhPxTcjHUgZchn1WirB-EoD91Rypg4wJuDtqMZvkr-wJBc8ZmCtj7qjV9KtDHlWeo-G0HKAJwlgJ1Esy4YzkcuoCaTqA5QbcXZrk0mak3GpH-~rB1IoqFtbRIq-QweLUEg__" alt="Organic Forms">
+            <div class="portfolio-item-info">
+                <h3>Organic Forms</h3>
+                <p>Sculpture</p>
+            </div>
+        </div>
+        <div class="portfolio-item">
+            <img src="https://s3-alpha-sig.figma.com/img/de41/30ce/3837ab9cc3ebbe5d39f42321b35c975d?Expires=1734912000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=REfdfw~EkmvXpeBelu5SPeSOy8lGWxzrVnqX-sFV7iTnUaQOy50biVEAwxuL3kJHbi7~25rnx9TqIbHj8g1kxDtDtNc-BDyWeG04LuyoHddhr4-lvcRC3tkmAcwz9htju09WkofkbVkcg8X-EwrW-AOKN~LHlkMVL-QHFRFFtzX7RV79Mk2Py3nBTlcfwNF2GNO2OEGfHXEBAsPR~MCR0IidoFt-6Od3HCTJfgPZLKwutE3M4iaCvzUq060J4HEEXtrg6dM~4ysnUuKj-djjyY3UiNo51RmILwCVYt2R~PWHqmfe~HamdQ6E9poHiU5vxtDHARO9EBrPlv8-8dbrrQ__" alt="Harmonious Textures">
+            <div class="portfolio-item-info">
+                <h3>Harmonious Textures</h3>
+                <p>Textile Design</p>
+            </div>
+        </div>
+        <div class="portfolio-item">
+            <img src="https://s3-alpha-sig.figma.com/img/0df1/9491/8071e1aa1391088758a52e9801d27a1a?Expires=1734912000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=V2V0xl-uLddS0CwOqebNDk0VmFeWgVkx2UmrX9aWWMzY855~d7bI15ig4L3lfD0JkuGMuCyv82URlrLANpB3LIClA87eXK~2tkC2N~BI3D2rZHYCKKR32qJi2SfxXVz1LOBVzMcTWvx8lPUb4Vh9Cl6YRO7Og58K2coIpsSitdDS8gnBbu~J4UgevSBQMdsNjChJI6zOpxyLKAAnclFwjo3~9gXYL25Rxl75x60kFZeuHsDsleK4ppa0p~TRwow6lJH5JBnhC869Ls9ke~g9d3q-P3zELd17H9FEcp0V-M5VhAA3odoIWzQVnVWn7m8pMhke9pZ6RVeiybV7dWGLYQ__" alt="Balanced Layouts">
+            <div class="portfolio-item-info">
+                <h3>Balanced Layouts</h3>
+                <p>Web Design</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="about">
+        <p>I am a designer and artist focused on creating serene and minimalist works that evoke a sense of tranquility and balance. My portfolio showcases a range of projects from photography to interior design, all unified by a calming aesthetic.</p>
+    </section>
+
+    <section class="contact">
+        <h2>Contact Me</h2>
+        <p>Feel free to reach out for collaborations or inquiries. I am always open to discussing new projects and creative ideas.</p>
+    </section>
+
+    <footer>
+        <p>©️ 2023 ZENFOLIO</p>
+        <a href="#" class="follow-btn">Follow Me</a>
+    </footer>
+</body>
+</html>
